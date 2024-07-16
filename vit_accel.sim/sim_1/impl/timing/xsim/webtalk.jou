@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Jun 21 09:48:28 2024
+# Process ID: 83992
+# Current directory: C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv.exe -mode batch -source C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_1/impl/timing/xsim/xsim.dir/adder_col_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_1/impl/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_1/impl/timing/xsim/xsim.dir/adder_col_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace

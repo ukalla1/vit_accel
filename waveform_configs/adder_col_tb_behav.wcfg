@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="adder_col_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="adder_col_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="240.001 ns"></ZoomEndTime>
+      <Cursor1Time time="240.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="208"></NameColumnWidth>
+      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/adder_col_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/col_data_in" type="array">
+      <obj_property name="ElementShortName">col_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">col_data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/data_in_unpack" type="array">
+      <obj_property name="ElementShortName">data_in_unpack[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_unpack[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/adder_en" type="array">
+      <obj_property name="ElementShortName">adder_en[3:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_en[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/adder_out" type="array">
+      <obj_property name="ElementShortName">adder_out[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_out[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/j" type="array">
+      <obj_property name="ElementShortName">j[7:0]</obj_property>
+      <obj_property name="ObjectShortName">j[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/result_internal" type="array">
+      <obj_property name="ElementShortName">result_internal[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_internal[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/result" type="array">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider81">
+      <obj_property name="label">Adder0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[0].genblk1.adder_inst /a" type="array">
+      <obj_property name="ElementShortName">a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[0].genblk1.adder_inst /b" type="array">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[0].genblk1.adder_inst /adder_en" type="logic">
+      <obj_property name="ElementShortName">adder_en</obj_property>
+      <obj_property name="ObjectShortName">adder_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[0].genblk1.adder_inst /result" type="array">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider81">
+      <obj_property name="label">Adder1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[1].genblk1.adder_inst /a" type="array">
+      <obj_property name="ElementShortName">a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[1].genblk1.adder_inst /b" type="array">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[1].genblk1.adder_inst /adder_en" type="logic">
+      <obj_property name="ElementShortName">adder_en</obj_property>
+      <obj_property name="ObjectShortName">adder_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[1].genblk1.adder_inst /result" type="array">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider81">
+      <obj_property name="label">Adder2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[2].genblk1.adder_inst /a" type="array">
+      <obj_property name="ElementShortName">a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[2].genblk1.adder_inst /b" type="array">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[2].genblk1.adder_inst /adder_en" type="logic">
+      <obj_property name="ElementShortName">adder_en</obj_property>
+      <obj_property name="ObjectShortName">adder_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adder_col_tb/uut/\genblk2[2].genblk1.adder_inst /result" type="array">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

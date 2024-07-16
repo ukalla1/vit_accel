@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../vit_accel.srcs/sources_1/new" \
+"adder_col_tb_func_synth.v" \
+"../../../../../vit_accel.srcs/sim_1/new/adder_col_tb.v" \
+
+# Do not sort compile order
+nosort

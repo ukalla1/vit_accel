@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="pe_row_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="pe_row_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,000.000 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="232"></NameColumnWidth>
+      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="38" />
+   <wvobject fp_name="/pe_row_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/gated_clk" type="logic">
+      <obj_property name="ElementShortName">gated_clk</obj_property>
+      <obj_property name="ObjectShortName">gated_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/a" type="array">
+      <obj_property name="ElementShortName">a[127:0]</obj_property>
+      <obj_property name="ObjectShortName">a[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/result" type="array">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/pe_out" type="array">
+      <obj_property name="ElementShortName">pe_out[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">pe_out[0:3][7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/a_unpack" type="array">
+      <obj_property name="ElementShortName">a_unpack[0:3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">a_unpack[0:3][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider251">
+      <obj_property name="label">PE3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /rst_acc" type="logic">
+      <obj_property name="ElementShortName">rst_acc</obj_property>
+      <obj_property name="ObjectShortName">rst_acc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /a" type="array">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /result" type="array">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /mac_out" type="array">
+      <obj_property name="ElementShortName">mac_out[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_out[0:3][7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /result_internal" type="array">
+      <obj_property name="ElementShortName">result_internal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result_internal[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /result_internal0" type="array">
+      <obj_property name="ElementShortName">result_internal0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result_internal0[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /result_internal1" type="array">
+      <obj_property name="ElementShortName">result_internal1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result_internal1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /a_unpack" type="array">
+      <obj_property name="ElementShortName">a_unpack[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">a_unpack[0:3][7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /b_unpack" type="array">
+      <obj_property name="ElementShortName">b_unpack[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_unpack[0:3][7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /j" type="array">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /k" type="array">
+      <obj_property name="ElementShortName">k[31:0]</obj_property>
+      <obj_property name="ObjectShortName">k[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider262">
+      <obj_property name="label">MAC3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[3].mac_inst /a" type="array">
+      <obj_property name="ElementShortName">a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[3].mac_inst /b" type="array">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[3].mac_inst /acc_in" type="array">
+      <obj_property name="ElementShortName">acc_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_in[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[3].mac_inst /acc_out" type="array">
+      <obj_property name="ElementShortName">acc_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_out[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[3].mac_inst /product" type="array">
+      <obj_property name="ElementShortName">product[15:0]</obj_property>
+      <obj_property name="ObjectShortName">product[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[3].mac_inst /acc_out_internal" type="array">
+      <obj_property name="ElementShortName">acc_out_internal[15:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_out_internal[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[3].mac_inst /acc_out_pipe" type="array">
+      <obj_property name="ElementShortName">acc_out_pipe[7:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_out_pipe[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider270">
+      <obj_property name="label">MAC2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[2].mac_inst /a" type="array">
+      <obj_property name="ElementShortName">a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[2].mac_inst /b" type="array">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[2].mac_inst /acc_in" type="array">
+      <obj_property name="ElementShortName">acc_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_in[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[2].mac_inst /acc_out" type="array">
+      <obj_property name="ElementShortName">acc_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_out[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[2].mac_inst /product" type="array">
+      <obj_property name="ElementShortName">product[15:0]</obj_property>
+      <obj_property name="ObjectShortName">product[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[2].mac_inst /acc_out_internal" type="array">
+      <obj_property name="ElementShortName">acc_out_internal[15:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_out_internal[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_row_tb/uut/\pe_gen[3].pe_inst /\mac_gen[2].mac_inst /acc_out_pipe" type="array">
+      <obj_property name="ElementShortName">acc_out_pipe[7:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_out_pipe[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

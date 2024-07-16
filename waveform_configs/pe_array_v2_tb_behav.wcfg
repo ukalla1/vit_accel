@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="pe_array_v2_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="pe_array_v2_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="310.001 ns"></ZoomEndTime>
+      <Cursor1Time time="310.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="214"></NameColumnWidth>
+      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="100" />
+   <wvobject fp_name="/pe_array_v2_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/rst_acc" type="logic">
+      <obj_property name="ElementShortName">rst_acc</obj_property>
+      <obj_property name="ObjectShortName">rst_acc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/clk_en" type="array">
+      <obj_property name="ElementShortName">clk_en[19:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_en[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/load_input" type="logic">
+      <obj_property name="ElementShortName">load_input</obj_property>
+      <obj_property name="ObjectShortName">load_input</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/a" type="array">
+      <obj_property name="ElementShortName">a[159:0]</obj_property>
+      <obj_property name="ObjectShortName">a[159:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/task_ctrl" type="array">
+      <obj_property name="ElementShortName">task_ctrl[7:0]</obj_property>
+      <obj_property name="ObjectShortName">task_ctrl[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/adder_en" type="array">
+      <obj_property name="ElementShortName">adder_en[19:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_en[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/visible" type="array">
+      <obj_property name="ElementShortName">visible[19:0]</obj_property>
+      <obj_property name="ObjectShortName">visible[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/pe_row_out_internal" type="array">
+      <obj_property name="ElementShortName">pe_row_out_internal[0:3][39:0]</obj_property>
+      <obj_property name="ObjectShortName">pe_row_out_internal[0:3][39:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/pe_row_out_flat" type="array">
+      <obj_property name="ElementShortName">pe_row_out_flat[159:0]</obj_property>
+      <obj_property name="ObjectShortName">pe_row_out_flat[159:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/adder_en" type="array">
+      <obj_property name="ElementShortName">adder_en[19:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_en[19:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/visible" type="array">
+      <obj_property name="ElementShortName">visible[19:0]</obj_property>
+      <obj_property name="ObjectShortName">visible[19:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/result" type="array">
+      <obj_property name="ElementShortName">result[159:0]</obj_property>
+      <obj_property name="ObjectShortName">result[159:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/ready" type="logic">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider521">
+      <obj_property name="label">PE_row1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FAAFBE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[0].pe_row_inst /clk_en" type="array">
+      <obj_property name="ElementShortName">clk_en[4:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_en[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[0].pe_row_inst /a" type="array">
+      <obj_property name="ElementShortName">a[159:0]</obj_property>
+      <obj_property name="ObjectShortName">a[159:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[0].pe_row_inst /b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[0].pe_row_inst /pe_out" type="array">
+      <obj_property name="ElementShortName">pe_out[0:4][7:0]</obj_property>
+      <obj_property name="ObjectShortName">pe_out[0:4][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider525">
+      <obj_property name="label">PE_row2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FAAFBE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[1].pe_row_inst /clk_en" type="array">
+      <obj_property name="ElementShortName">clk_en[4:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_en[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[1].pe_row_inst /a" type="array">
+      <obj_property name="ElementShortName">a[159:0]</obj_property>
+      <obj_property name="ObjectShortName">a[159:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[1].pe_row_inst /b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[1].pe_row_inst /pe_out" type="array">
+      <obj_property name="ElementShortName">pe_out[0:4][7:0]</obj_property>
+      <obj_property name="ObjectShortName">pe_out[0:4][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider529">
+      <obj_property name="label">PE_row3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FAAFBE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[2].pe_row_inst /clk_en" type="array">
+      <obj_property name="ElementShortName">clk_en[4:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_en[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[2].pe_row_inst /a" type="array">
+      <obj_property name="ElementShortName">a[159:0]</obj_property>
+      <obj_property name="ObjectShortName">a[159:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[2].pe_row_inst /b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[2].pe_row_inst /pe_out" type="array">
+      <obj_property name="ElementShortName">pe_out[0:4][7:0]</obj_property>
+      <obj_property name="ObjectShortName">pe_out[0:4][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider533">
+      <obj_property name="label">PE_row4</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FAAFBE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[3].pe_row_inst /clk_en" type="array">
+      <obj_property name="ElementShortName">clk_en[4:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_en[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[3].pe_row_inst /a" type="array">
+      <obj_property name="ElementShortName">a[159:0]</obj_property>
+      <obj_property name="ObjectShortName">a[159:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[3].pe_row_inst /b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/\genblk1[3].pe_row_inst /pe_out" type="array">
+      <obj_property name="ElementShortName">pe_out[0:4][7:0]</obj_property>
+      <obj_property name="ObjectShortName">pe_out[0:4][7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider602">
+      <obj_property name="label">NoC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FFD700</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/pe_row_out_flat" type="array">
+      <obj_property name="ElementShortName">pe_row_out_flat[159:0]</obj_property>
+      <obj_property name="ObjectShortName">pe_row_out_flat[159:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/adder_en" type="array">
+      <obj_property name="ElementShortName">adder_en[19:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_en[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/result" type="array">
+      <obj_property name="ElementShortName">result[159:0]</obj_property>
+      <obj_property name="ObjectShortName">result[159:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/ready" type="logic">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/partial_sums" type="array">
+      <obj_property name="ElementShortName">partial_sums[0:4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">partial_sums[0:4][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/adder_result" type="array">
+      <obj_property name="ElementShortName">adder_result[0:4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_result[0:4][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider463">
+      <obj_property name="label">Adder_col0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#E0FFFF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[0].adder_col_inst /col_data_in" type="array">
+      <obj_property name="ElementShortName">col_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">col_data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[0].adder_col_inst /adder_en" type="array">
+      <obj_property name="ElementShortName">adder_en[3:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_en[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[0].adder_col_inst /visible" type="array">
+      <obj_property name="ElementShortName">visible[3:0]</obj_property>
+      <obj_property name="ObjectShortName">visible[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[0].adder_col_inst /result" type="array">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[0].adder_col_inst /done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[0].adder_col_inst /clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[0].adder_col_inst /data_in_unpack" type="array">
+      <obj_property name="ElementShortName">data_in_unpack[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_unpack[0:3][7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[0].adder_col_inst /adder_out" type="array">
+      <obj_property name="ElementShortName">adder_out[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_out[0:3][7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[0].adder_col_inst /j" type="array">
+      <obj_property name="ElementShortName">j[7:0]</obj_property>
+      <obj_property name="ObjectShortName">j[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[0].adder_col_inst /result_internal" type="array">
+      <obj_property name="ElementShortName">result_internal[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_internal[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider463">
+      <obj_property name="label">Adder_col1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#E0FFFF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[1].adder_col_inst /col_data_in" type="array">
+      <obj_property name="ElementShortName">col_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">col_data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[1].adder_col_inst /adder_en" type="array">
+      <obj_property name="ElementShortName">adder_en[3:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_en[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[1].adder_col_inst /visible" type="array">
+      <obj_property name="ElementShortName">visible[3:0]</obj_property>
+      <obj_property name="ObjectShortName">visible[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[1].adder_col_inst /result" type="array">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[1].adder_col_inst /done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[1].adder_col_inst /clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[1].adder_col_inst /data_in_unpack" type="array">
+      <obj_property name="ElementShortName">data_in_unpack[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_unpack[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[1].adder_col_inst /adder_out" type="array">
+      <obj_property name="ElementShortName">adder_out[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_out[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[1].adder_col_inst /result_internal" type="array">
+      <obj_property name="ElementShortName">result_internal[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_internal[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[1].adder_col_inst /j" type="array">
+      <obj_property name="ElementShortName">j[7:0]</obj_property>
+      <obj_property name="ObjectShortName">j[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider463">
+      <obj_property name="label">Adder_col2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#E0FFFF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[2].adder_col_inst /col_data_in" type="array">
+      <obj_property name="ElementShortName">col_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">col_data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[2].adder_col_inst /adder_en" type="array">
+      <obj_property name="ElementShortName">adder_en[3:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_en[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[2].adder_col_inst /visible" type="array">
+      <obj_property name="ElementShortName">visible[3:0]</obj_property>
+      <obj_property name="ObjectShortName">visible[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[2].adder_col_inst /result" type="array">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[2].adder_col_inst /done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[2].adder_col_inst /clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[2].adder_col_inst /data_in_unpack" type="array">
+      <obj_property name="ElementShortName">data_in_unpack[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_unpack[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[2].adder_col_inst /adder_out" type="array">
+      <obj_property name="ElementShortName">adder_out[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_out[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[2].adder_col_inst /result_internal" type="array">
+      <obj_property name="ElementShortName">result_internal[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_internal[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[2].adder_col_inst /j" type="array">
+      <obj_property name="ElementShortName">j[7:0]</obj_property>
+      <obj_property name="ObjectShortName">j[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider463">
+      <obj_property name="label">Adder_col3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#E0FFFF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /col_data_in" type="array">
+      <obj_property name="ElementShortName">col_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">col_data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /adder_en" type="array">
+      <obj_property name="ElementShortName">adder_en[3:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_en[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /visible" type="array">
+      <obj_property name="ElementShortName">visible[3:0]</obj_property>
+      <obj_property name="ObjectShortName">visible[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /result" type="array">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /data_in_unpack" type="array">
+      <obj_property name="ElementShortName">data_in_unpack[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_unpack[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /adder_out" type="array">
+      <obj_property name="ElementShortName">adder_out[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_out[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /result_internal" type="array">
+      <obj_property name="ElementShortName">result_internal[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_internal[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[3].adder_col_inst /j" type="array">
+      <obj_property name="ElementShortName">j[7:0]</obj_property>
+      <obj_property name="ObjectShortName">j[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider463">
+      <obj_property name="label">Adder_col4</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#E0FFFF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[4].adder_col_inst /col_data_in" type="array">
+      <obj_property name="ElementShortName">col_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">col_data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[4].adder_col_inst /adder_en" type="array">
+      <obj_property name="ElementShortName">adder_en[3:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_en[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[4].adder_col_inst /visible" type="array">
+      <obj_property name="ElementShortName">visible[3:0]</obj_property>
+      <obj_property name="ObjectShortName">visible[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[4].adder_col_inst /result" type="array">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[4].adder_col_inst /done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[4].adder_col_inst /clk_en" type="logic">
+      <obj_property name="ElementShortName">clk_en</obj_property>
+      <obj_property name="ObjectShortName">clk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[4].adder_col_inst /data_in_unpack" type="array">
+      <obj_property name="ElementShortName">data_in_unpack[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_unpack[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[4].adder_col_inst /adder_out" type="array">
+      <obj_property name="ElementShortName">adder_out[0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_out[0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[4].adder_col_inst /result_internal" type="array">
+      <obj_property name="ElementShortName">result_internal[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_internal[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pe_array_v2_tb/uut/noc_inst/\genblk1[4].adder_col_inst /j" type="array">
+      <obj_property name="ElementShortName">j[7:0]</obj_property>
+      <obj_property name="ObjectShortName">j[7:0]</obj_property>
+   </wvobject>
+</wave_config>
