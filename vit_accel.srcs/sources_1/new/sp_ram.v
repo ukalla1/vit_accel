@@ -25,7 +25,7 @@
 `include "parameters.vh"
 
 module sp_ram   #(
-    parameter DATA_WIDTH = 8,
+    parameter DATA_WIDTH = 16,
     parameter MEM_DEPTH = 8,
     parameter ADDR_WIDTH = 3,
     parameter INIT_FILE = ""
@@ -40,25 +40,24 @@ module sp_ram   #(
     );
     
     reg [DATA_WIDTH-1:0] sp_ram [MEM_DEPTH-1:0];
+//    (*ram_style="block", use_bram36="yes"*) reg [DATA_WIDTH-1:0] sp_ram [depth(ADDR_WIDTH)-1:0];
     
     reg [DATA_WIDTH-1:0] mem_out_internal = {DATA_WIDTH{1'b0}};
         
+    reg [127:0] i, j;
     //init the memory contents either with 0s or an init file
-    generate 
+    initial begin
         if (INIT_FILE != "") begin
-            initial begin
-                $readmemh(INIT_FILE, sp_ram, 0, MEM_DEPTH-1);
-            end
+            $readmemh(INIT_FILE, sp_ram, 0, MEM_DEPTH-1);
         end
         else begin
-            integer i;
-            initial begin
-                for (i=0; i<MEM_DEPTH; i=i+1) begin
-                    sp_ram[i] = {DATA_WIDTH{1'b0}};
+            for (i=0; i<MEM_DEPTH; i=i+1) begin
+                for(j = 0; j < (DATA_WIDTH / 4); j = j + 1) begin              
+                    sp_ram[i][j * 4 +: 4] = j[3:0] + 4'd1 + i[3:0];                
                 end
             end
         end
-    endgenerate
+    end
     
     always @(posedge clk) begin
         if(rst) begin
@@ -78,4 +77,14 @@ module sp_ram   #(
     
     assign mem_out = mem_out_internal;
     
+    function integer depth;
+        input integer width;
+        begin
+            depth = 1;
+            while (width > 0) begin
+                depth = depth << 1;
+                width = width - 1;
+            end
+        end      
+    endfunction
 endmodule

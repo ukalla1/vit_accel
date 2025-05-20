@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="71.431885001 ms"></ZoomEndTime>
+      <Cursor1Time time="18.255515000 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="353"></NameColumnWidth>
+      <ValueColumnWidth column_width="200"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="58" />
+   <wvobject fp_name="/top_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/mem_addr" type="array">
+      <obj_property name="ElementShortName">mem_addr[21:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_addr[21:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/wrd_addr" type="array">
+      <obj_property name="ElementShortName">wrd_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wrd_addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/mem_sel" type="array">
+      <obj_property name="ElementShortName">mem_sel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_sel[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/mem_en" type="logic">
+      <obj_property name="ElementShortName">mem_en</obj_property>
+      <obj_property name="ObjectShortName">mem_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/mem_wr" type="logic">
+      <obj_property name="ElementShortName">mem_wr</obj_property>
+      <obj_property name="ObjectShortName">mem_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/input_rdy" type="logic">
+      <obj_property name="ElementShortName">input_rdy</obj_property>
+      <obj_property name="ObjectShortName">input_rdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/output_rdy" type="logic">
+      <obj_property name="ElementShortName">output_rdy</obj_property>
+      <obj_property name="ObjectShortName">output_rdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/x_dim" type="array">
+      <obj_property name="ElementShortName">x_dim[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x_dim[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/qkv_dim" type="array">
+      <obj_property name="ElementShortName">qkv_dim[15:0]</obj_property>
+      <obj_property name="ObjectShortName">qkv_dim[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/num_Xff" type="array">
+      <obj_property name="ElementShortName">num_Xff[15:0]</obj_property>
+      <obj_property name="ObjectShortName">num_Xff[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/H_dim" type="array">
+      <obj_property name="ElementShortName">H_dim[15:0]</obj_property>
+      <obj_property name="ObjectShortName">H_dim[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/block" type="array">
+      <obj_property name="ElementShortName">block[31:0]</obj_property>
+      <obj_property name="ObjectShortName">block[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/addr" type="array">
+      <obj_property name="ElementShortName">addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/byte" type="array">
+      <obj_property name="ElementShortName">byte[31:0]</obj_property>
+      <obj_property name="ObjectShortName">byte[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/mem_depth" type="array">
+      <obj_property name="ElementShortName">mem_depth[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_depth[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/byte_val" type="array">
+      <obj_property name="ElementShortName">byte_val[3:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_val[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/COUNTER_WIDTH" type="array">
+      <obj_property name="ElementShortName">COUNTER_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">COUNTER_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/QKV" type="array">
+      <obj_property name="ElementShortName">QKV[31:0]</obj_property>
+      <obj_property name="ObjectShortName">QKV[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/X_FF" type="array">
+      <obj_property name="ElementShortName">X_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">X_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/H" type="array">
+      <obj_property name="ElementShortName">H[31:0]</obj_property>
+      <obj_property name="ObjectShortName">H[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/X_IN" type="array">
+      <obj_property name="ElementShortName">X_IN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">X_IN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/L" type="array">
+      <obj_property name="ElementShortName">L[31:0]</obj_property>
+      <obj_property name="ObjectShortName">L[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/NUM_QKV_PES" type="array">
+      <obj_property name="ElementShortName">NUM_QKV_PES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_QKV_PES[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/NUM_FF_PES" type="array">
+      <obj_property name="ElementShortName">NUM_FF_PES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_FF_PES[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/NUM_QKV_MACS" type="array">
+      <obj_property name="ElementShortName">NUM_QKV_MACS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_QKV_MACS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/NUM_FF_MACS" type="array">
+      <obj_property name="ElementShortName">NUM_FF_MACS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_FF_MACS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/NUM_QKV_ROWS" type="array">
+      <obj_property name="ElementShortName">NUM_QKV_ROWS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_QKV_ROWS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/NUM_FF_ROWS" type="array">
+      <obj_property name="ElementShortName">NUM_FF_ROWS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_FF_ROWS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_lp1" type="array">
+      <obj_property name="ElementShortName">d_lp1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_lp1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_lp2" type="array">
+      <obj_property name="ElementShortName">d_lp2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_lp2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_linear" type="array">
+      <obj_property name="ElementShortName">d_linear[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_linear[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_ff_inp1" type="array">
+      <obj_property name="ElementShortName">d_ff_inp1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_ff_inp1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_ff_inp2" type="array">
+      <obj_property name="ElementShortName">d_ff_inp2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_ff_inp2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_ff_in" type="array">
+      <obj_property name="ElementShortName">d_ff_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_ff_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_ffp1" type="array">
+      <obj_property name="ElementShortName">d_ffp1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_ffp1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_ffp2" type="array">
+      <obj_property name="ElementShortName">d_ffp2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_ffp2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_ff" type="array">
+      <obj_property name="ElementShortName">d_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_ff[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_qkvp1" type="array">
+      <obj_property name="ElementShortName">d_qkvp1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_qkvp1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_qkvp2" type="array">
+      <obj_property name="ElementShortName">d_qkvp2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_qkvp2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/d_qkv" type="array">
+      <obj_property name="ElementShortName">d_qkv[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_qkv[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/Wqkv_MEM_DEPTH" type="array">
+      <obj_property name="ElementShortName">Wqkv_MEM_DEPTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Wqkv_MEM_DEPTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/Wff1_MEM_DEPTH" type="array">
+      <obj_property name="ElementShortName">Wff1_MEM_DEPTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Wff1_MEM_DEPTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/Wff2_MEM_DEPTH" type="array">
+      <obj_property name="ElementShortName">Wff2_MEM_DEPTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Wff2_MEM_DEPTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/WL_MEM_DEPTH" type="array">
+      <obj_property name="ElementShortName">WL_MEM_DEPTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WL_MEM_DEPTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/Wqkv_MEM_ADDR_W" type="array">
+      <obj_property name="ElementShortName">Wqkv_MEM_ADDR_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Wqkv_MEM_ADDR_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/Wff1_MEM_ADDR_W" type="array">
+      <obj_property name="ElementShortName">Wff1_MEM_ADDR_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Wff1_MEM_ADDR_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/Wff2_MEM_ADDR_W" type="array">
+      <obj_property name="ElementShortName">Wff2_MEM_ADDR_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Wff2_MEM_ADDR_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/WL_MEM_ADDR_W" type="array">
+      <obj_property name="ElementShortName">WL_MEM_ADDR_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WL_MEM_ADDR_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/MAX_ADDR_W" type="array">
+      <obj_property name="ElementShortName">MAX_ADDR_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAX_ADDR_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/X_WIDTH" type="array">
+      <obj_property name="ElementShortName">X_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">X_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/W_WIDTH" type="array">
+      <obj_property name="ElementShortName">W_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">W_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/WORD_ADDR_W" type="array">
+      <obj_property name="ElementShortName">WORD_ADDR_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WORD_ADDR_W[31:0]</obj_property>
+   </wvobject>
+</wave_config>
