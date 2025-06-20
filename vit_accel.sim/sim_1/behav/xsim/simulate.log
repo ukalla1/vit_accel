@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+Starting Updated Testbench...
+Computation done. Final output = 0
+$finish called at time : 1131085 ns : File "F:/Miki/JHU/research/Accelerator_2025/vit_accel/vit_accel.srcs/sim_1/new/top_tb.sv" Line 165
+INFO: xsimkernel Simulation Memory Usage: 67184 KB (Peak: 67184 KB), Simulation CPU Usage: 220187 ms

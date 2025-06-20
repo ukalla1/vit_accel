@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../vit_accel.srcs/sources_1/new" \
+"../../../../vit_accel.srcs/sources_1/new/adder.sv" \
+"../../../../vit_accel.srcs/sources_1/new/ff_block.sv" \
+"../../../../vit_accel.srcs/sources_1/new/mac_unit.sv" \
+"../../../../vit_accel.srcs/sources_1/new/mult.sv" \
+"../../../../vit_accel.srcs/sources_1/new/mult_array.sv" \
+"../../../../vit_accel.srcs/sources_1/new/mult_pe.sv" \
+"../../../../vit_accel.srcs/sources_1/new/mult_row.sv" \
+"../../../../vit_accel.srcs/sources_1/new/pe_array.sv" \
+"../../../../vit_accel.srcs/sources_1/new/pe_output_buffer.sv" \
+"../../../../vit_accel.srcs/sources_1/new/pe_row.sv" \
+"../../../../vit_accel.srcs/sources_1/new/processing_element.sv" \
+"../../../../vit_accel.srcs/sources_1/new/qkv_block.sv" \
+"../../../../vit_accel.srcs/sources_1/new/sp_ram.sv" \
+"../../../../vit_accel.srcs/sources_1/new/top.sv" \
+"../../../../vit_accel.srcs/sim_1/new/top_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
