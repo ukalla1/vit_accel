@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2024.2 (64-bit)                              -->
+<!-- Product Version: Vivado v2024.1 (64-bit)                              -->
 <!--                                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="68" Path="F:/Miki/JHU/research/Accelerator_2025/vit_accel/vit_accel.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="/LinuxRAID/home/miki/Documents/projects/vit_accel/vit_accel.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="53bcf718b8ce4cfab9a9457fc2a960bb"/>
+    <Option Name="Id" Val="f86456228ace43988443aaa2e52d12a5"/>
     <Option Name="Part" Val="xcvu35p-fsvh2892-1-e"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -29,13 +29,13 @@
     <Option Name="SimulatorGccInstallDirVCS" Val=""/>
     <Option Name="SimulatorGccInstallDirRiviera" Val=""/>
     <Option Name="SimulatorGccInstallDirActiveHdl" Val=""/>
-    <Option Name="SimulatorVersionXsim" Val="2024.2"/>
-    <Option Name="SimulatorVersionModelSim" Val="2024.1"/>
-    <Option Name="SimulatorVersionQuesta" Val="2024.1"/>
-    <Option Name="SimulatorVersionXcelium" Val="24.03.003"/>
-    <Option Name="SimulatorVersionVCS" Val="V-2023.12-SP1"/>
-    <Option Name="SimulatorVersionRiviera" Val="2024.04"/>
-    <Option Name="SimulatorVersionActiveHdl" Val="15.0"/>
+    <Option Name="SimulatorVersionXsim" Val="2024.1"/>
+    <Option Name="SimulatorVersionModelSim" Val="2023.2"/>
+    <Option Name="SimulatorVersionQuesta" Val="2023.2"/>
+    <Option Name="SimulatorVersionXcelium" Val="23.03.002"/>
+    <Option Name="SimulatorVersionVCS" Val="U-2023.03-1"/>
+    <Option Name="SimulatorVersionRiviera" Val="2023.04"/>
+    <Option Name="SimulatorVersionActiveHdl" Val="14.1"/>
     <Option Name="SimulatorGccVersionXsim" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionModelSim" Val="7.4.0"/>
     <Option Name="SimulatorGccVersionQuesta" Val="7.4.0"/>
@@ -58,7 +58,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="4"/>
+    <Option Name="WTXSimLaunchSim" Val="0"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -83,112 +83,142 @@
     <Option Name="SimTypes" Val="tlm_dpi"/>
     <Option Name="MEMEnableMemoryMapGeneration" Val="TRUE"/>
     <Option Name="DcpsUptoDate" Val="TRUE"/>
-    <Option Name="UseInlineHdlIP" Val="TRUE"/>
+    <Option Name="ClassicSocBoot" Val="FALSE"/>
     <Option Name="LocalIPRepoLeafDirName" Val="ip_repo"/>
   </Configuration>
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/adder.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/adder.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/adder.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/ff_block.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/ff_block.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/ff_block.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/mac_unit.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/mac_unit.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/mac_unit.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/mult.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/mult.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/mult.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/mult_array.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/mult_array.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/mult_array.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/mult_pe.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/mult_pe.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/mult_pe.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/mult_row.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/mult_row.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/mult_row.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/pe_array.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/pe_array.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/pe_array.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/pe_output_buffer.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/pe_output_buffer.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/pe_output_buffer.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/pe_row.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/pe_row.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/pe_row.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/processing_element.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/processing_element.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/processing_element.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/qkv_block.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/qkv_block.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/qkv_block.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/parameters.vh">
+      <File Path="$PSRCDIR/sources_1/imports/new/parameters.vh">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/parameters.vh"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
           <Attr Name="IsVisible" Val="1"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/sp_ram.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/sp_ram.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/sp_ram.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/top.sv">
+      <File Path="$PSRCDIR/sources_1/imports/new/top.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sources_1/new/top.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -202,14 +232,21 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/new/timing.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
-      <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/new/top_tb.sv">
+      <File Path="$PSRCDIR/sim_1/imports/new/top_tb.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../tmp_accel/vit_accel.srcs/sim_1/new/top_tb.sv"/>
+          <Attr Name="ImportTime" Val="1750431360"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -228,9 +265,6 @@
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="CosimPdi" Val=""/>
-        <Option Name="CosimPlatform" Val=""/>
-        <Option Name="CosimElf" Val=""/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
@@ -251,17 +285,22 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
+    <Simulator Name="Xcelium">
+      <Option Name="Description" Val="Xcelium Parallel Simulator"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
-    </Simulator>
-    <Simulator Name="ActiveHDL">
-      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="22">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xcvu35p-fsvh2892-1-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2024"/>
@@ -270,7 +309,9 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcvu35p-fsvh2892-1-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
