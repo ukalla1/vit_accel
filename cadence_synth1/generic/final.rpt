@@ -1,0 +1,52 @@
+
+
+Working Directory = /LinuxRAID/home/miki/Documents/projects/vit_accel_2025/syn/accel/run
+QoS Summary for accel
+================================================================================
+Metric                          generic        
+================================================================================
+Slack (ps):                     2,613
+  R2R (ps):                     2,613
+  I2R (ps):                     3,948
+  R2O (ps):                     3,456
+  I2O (ps):                  no_value
+  CG  (ps):                     3,859
+TNS (ps):                           0
+  R2R (ps):                         0
+  I2R (ps):                         0
+  R2O (ps):                         0
+  I2O (ps):                  no_value
+  CG  (ps):                         0
+Failing Paths:                      0
+Leakage Power (mW):            29.684
+Cell Area:                  4,827,970
+Total Cell Area:            4,827,970
+Leaf Instances:               258,489
+Total Instances:              258,489
+Utilization (%):                 0.00
+Tot. Net Length (um):        no_value
+Avg. Net Length (um):        no_value
+Route Overflow H (%):        no_value
+Route Overflow V (%):        no_value
+MBCI(%) (bits/gate) :            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value
+  Tot Cong:                  no_value
+================================================================================
+CPU  Runtime (h:m:s):        00:52:54
+Real Runtime (h:m:s):        00:45:21
+CPU  Elapsed (h:m:s):        00:53:23
+Real Elapsed (h:m:s):        00:45:37
+Memory (MB):                  5281.93
+================================================================================
+================================================================================
+Flow Settings:
+================================================================================
+Total Runtime (h:m:s): 00:46:10
+Total Memory (MB):     5281.93
+Executable Version:    23.13-s073_1
+================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+
