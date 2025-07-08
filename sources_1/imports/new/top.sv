@@ -39,13 +39,14 @@ module top #(
         parameter X_FF = 3072,
         parameter H = 12,
         parameter L = 1,
-        parameter X_IN = QKV * H,        
-        parameter NUM_QKV_PES = 4, // number of PES for matrix vector multiplication
-        parameter NUM_FF_PES = 4,
-        parameter NUM_QKV_MACS = 4,
-        parameter NUM_FF_MACS = 4,        
-        parameter NUM_QKV_ROWS = 4,
-        parameter NUM_FF_ROWS = 4,
+        parameter X_IN = QKV * H,    
+        parameter NUM_QKV_MACS = 5,       
+        parameter NUM_QKV_PES = 14, // number of PES for matrix vector multiplication
+        parameter NUM_QKV_ROWS = 5,
+        
+        parameter NUM_FF_MACS = 15,    
+        parameter NUM_FF_PES = 25, 
+        parameter NUM_FF_ROWS = 15,
                 
         localparam integer d_lp1 = ((X_IN + (NUM_FF_PES) - 1) / NUM_FF_PES),
         localparam integer d_lp2 = (X_IN + (NUM_FF_MACS * NUM_FF_ROWS) - 1) / (NUM_FF_MACS * NUM_FF_ROWS),
@@ -94,10 +95,10 @@ module top #(
         input [2:0] mem_sel,
         input mem_en,
         input mem_wr,        
-        input [COUNTER_WIDTH-1:0] x_dim,
-        input [COUNTER_WIDTH-1:0] qkv_dim,
-        input [COUNTER_WIDTH-1:0] num_Xff,
-        input [COUNTER_WIDTH-1:0] H_dim,
+//        input [COUNTER_WIDTH-1:0] x_dim,
+//        input [COUNTER_WIDTH-1:0] qkv_dim,
+//        input [COUNTER_WIDTH-1:0] num_Xff,
+//        input [COUNTER_WIDTH-1:0] H_dim,
         input [WORD_ADDR_W - 1 :0] wrd_addr,
         output input_rdy,
         output output_rdy,
@@ -115,6 +116,16 @@ module top #(
     logic [X_IN * DATA_WIDTH - 1 :0] qkv_out;
     logic ff_done;
     logic data_rdy;
+    
+    logic [COUNTER_WIDTH-1:0] x_dim;
+    logic [COUNTER_WIDTH-1:0] qkv_dim;
+    logic [COUNTER_WIDTH-1:0] num_Xff;
+    logic [COUNTER_WIDTH-1:0] H_dim;
+    
+    assign x_dim = X_IN;
+    assign qkv_dim = QKV;
+    assign num_Xff = X_FF;
+    assign H_dim = H;
     
     assign output_rdy = data_rdy;    
     assign data_out = output_buf[DATA_WIDTH - 1 : 0];
@@ -148,6 +159,7 @@ module top #(
             if(data_rdy && data_cntr == 0) begin
                 output_buf <= ff_out;
                 ff_ack <= 1;
+                data_cntr <= X_IN;
             end else if(data_cntr != 0) begin
                 output_buf <= output_buf >> DATA_WIDTH;
                 data_cntr <= data_cntr - 1;
@@ -181,7 +193,6 @@ module top #(
         .start(start),
         .x_dim(x_dim),
         .x_in(x_in),
-        .qkv_dim(qkv_dim),
         .H_dim(H_dim),
         .mem_sel(mem_sel),
         .mem_in(w_in[NUM_QKV_ROWS * NUM_QKV_MACS * NUM_QKV_PES * DATA_WIDTH - 1 : 0]),

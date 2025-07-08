@@ -16,6 +16,7 @@
     `define NUM_MACS 4                             // no. of mac modules per PE
     `define NUM_PEs_PER_ROW 5            // no. of PEs per row of the PE array
     `define NUM_ROWS 4                             // no. of rows in the PE array
+    `define qkv_dim 64
 ////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////// PE buffer configurations ///////////////////////////////

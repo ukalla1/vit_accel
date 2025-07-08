@@ -11,12 +11,12 @@ module top_tb;
     parameter H = 12;
     parameter X_IN = QKV * H;
     parameter L = 1;
-    parameter NUM_QKV_PES = 4;
-    parameter NUM_FF_PES = 4;
-    parameter NUM_QKV_MACS = 4;
-    parameter NUM_FF_MACS = 4;
-    parameter NUM_QKV_ROWS = 4;
-    parameter NUM_FF_ROWS = 4;
+    parameter NUM_QKV_PES = 1;
+    parameter NUM_FF_PES = 1;
+    parameter NUM_QKV_MACS = 1;
+    parameter NUM_FF_MACS = 1;
+    parameter NUM_QKV_ROWS = 1;
+    parameter NUM_FF_ROWS = 1;
 
     localparam integer d_lp1 = ((X_IN + (NUM_FF_PES) - 1) / NUM_FF_PES);
     localparam integer d_lp2 = (X_IN + (NUM_FF_MACS * NUM_FF_ROWS) - 1) / (NUM_FF_MACS * NUM_FF_ROWS);
@@ -79,10 +79,10 @@ module top_tb;
         .mem_sel(mem_sel),
         .mem_en(mem_en),
         .mem_wr(mem_wr),
-        .x_dim(x_dim),
-        .qkv_dim(qkv_dim),
-        .num_Xff(num_Xff),
-        .H_dim(H_dim),
+//        .x_dim(x_dim),
+//        .qkv_dim(qkv_dim),
+//        .num_Xff(num_Xff),
+//        .H_dim(H_dim),
         .wrd_addr(wrd_addr),
         .input_rdy(input_rdy),
         .output_rdy(output_rdy),
@@ -125,7 +125,7 @@ module top_tb;
                 if (block >= 6) begin
                     for (data_byte = 0; data_byte < X_IN; data_byte = data_byte + 1) begin
                         wrd_addr = data_byte;  // word-level offset
-                        byte_val = (addr + data_byte) % 10;  // example pattern
+                        byte_val = (addr + data_byte + 1) % 10;  // example pattern
                         data_in = byte_val[DATA_WIDTH - 1 : 0];
                         #10;
                     end            

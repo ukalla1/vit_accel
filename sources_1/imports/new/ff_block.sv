@@ -98,12 +98,8 @@ module ff_block    #(
         
     reg [COUNTER_WIDTH - 1 : 0] num_X_in, num_X_out;
     reg [COUNTER_WIDTH - 1 : 0] num_X_q, num_Xff_q;
-    wire [COUNTER_WIDTH - 1 : 0] X_dim_in, X_dim_out, d_dim_in;
+    reg [COUNTER_WIDTH - 1 : 0] X_dim_in, X_dim_out, d_dim_in;
     
-    // number of zeros output is the number of times it takes to get an output from the 
-    assign X_dim_in = (num_X_in + NUM_PEs - 1) / NUM_PEs;
-    assign X_dim_out = (num_X_out + NUM_PEs - 1) / NUM_PEs;
-    assign d_dim_in = (num_X_out + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
     
     
     reg wf1_mem_en, wl_mem_en, wf2_mem_en;
@@ -130,7 +126,7 @@ module ff_block    #(
     reg mem_wr_internal;    
     
     reg [MAX_ADDR_W - 1:0] w_mem_addr;
-    wire [MAX_ADDR_W - 1:0] w_mem_addr_internal;
+    reg [MAX_ADDR_W - 1:0] w_mem_addr_internal;
                            
     // PE Array signals
     reg start_pes;
@@ -227,8 +223,8 @@ module ff_block    #(
         .workload_cols(workload_cols),
         .matrix_flat(pe_matrix_in),
         .vector_flat(pe_vector_in),
-        .done(done_pes),
-        .results_flat(pe_results_out)
+        .done_o(done_pes),
+        .results_flat_out(pe_results_out)
     );  
     
     
@@ -361,10 +357,9 @@ module ff_block    #(
     // vec_cntr corressponds to what row we are at
     // h_cntr corresponds to the current head we are working on, or an offset of X_dim * d_dim
     // l_cntr corresponds to the current Layer we are working on or an offset of X_dim * d_dim * H_dim
-    assign w_mem_addr_internal = vec_cntr + d_cntr * X_dim_in;   
        
     // process controlling the PE array
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk) begin
         if(rst) begin
             workload_cols <= 0;
             start_pes <= 0;  
@@ -386,6 +381,7 @@ module ff_block    #(
             
             out_buff <= 0;       
             
+            w_mem_addr_internal <= 0;
             
             ff1_done <= 0;
             ff2_done <= 0;
@@ -400,15 +396,19 @@ module ff_block    #(
             num_X_out <= 0;
             output_rdy <= 0;
             out_buff <= 0;
-            
+             
+            X_dim_in <= 0;
+            X_dim_out <= 0;
+            d_dim_in <= 0; // ceiling calculation
+                          
             vec_in <= 0;
             
         end else begin
+        
             if(output_ack) begin
                 output_rdy <= 0;
                 out_buff <= 0;
             end
-            
             
             vec_in <= (vec_cntr < vec_stack_size) ? vec_stack[vec_cntr] : 0;
             res_add <= ((!lin_done | ff1_done) & d_cntr < res_stack_size) ? residual_stack[d_cntr] : 0;
@@ -429,6 +429,7 @@ module ff_block    #(
                         
                         full_vec_in <= x_in;
                         residual <= res_in;
+                        w_mem_addr_internal <= 0;
                         
                         state <= compute;
                         mem_pe_cntrl <= 1; // internals have control of PE
@@ -442,6 +443,10 @@ module ff_block    #(
                         // input equal to output for first linear layer
                         num_X_in <= num_X;
                         num_X_out <= num_X;
+                        
+                        X_dim_in <= (num_X + NUM_PEs - 1) / NUM_PEs;
+                        X_dim_out <= (num_X + NUM_PEs - 1) / NUM_PEs;
+                        d_dim_in <= (num_X + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
                                                  
                     end 
                 end
@@ -451,8 +456,9 @@ module ff_block    #(
                     start_pes <= 0;
                     new_input <= 0; 
                 
-                    if((vec_cntr < X_dim_in)) begin
-                        vec_cntr <= vec_cntr + 1;                
+                    if((vec_cntr > 0) && (vec_cntr < X_dim_in) || (start_pes)) begin
+                        vec_cntr <= vec_cntr + 1;              
+                        w_mem_addr_internal <= (vec_cntr + 1) + d_cntr * X_dim_in;   
                     end 
                       
                     // if we reset count we need to load in new values
@@ -493,6 +499,7 @@ module ff_block    #(
                             new_input <= 1;
                             d_cntr <= 0; 
                             vec_cntr <= 0;  
+                            w_mem_addr_internal <= 0;   
                                  
                             if(!lin_done) begin     
                                 en_lin <= 0;
@@ -500,33 +507,55 @@ module ff_block    #(
                                 en_f2 <= 0;
                                 num_X_in <= num_X_q;
                                 num_X_out <= num_Xff_q;
+                                
                                 lin_done <= 1;                      
-                                workload_cols <= X_dim_out * NUM_PEs * NUM_MACS;                                                 
+                                workload_cols <= X_dim_out;
+                                
+                                X_dim_in <= (num_X_q + NUM_PEs - 1) / NUM_PEs;
+                                X_dim_out <= (num_Xff_q + NUM_PEs - 1) / NUM_PEs;
+                                d_dim_in <= (num_Xff_q + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
+                                                                                 
                             end else if(!ff1_done) begin    
                                 en_lin <= 0;
                                 en_f1 <= 0;
                                 en_f2 <= 1;
                                 num_X_in <= num_Xff_q;
-                                num_X_out <= num_X_q;                                   
+                                num_X_out <= num_X_q;
+                                     
                                 ff1_done <= 1;        
                                 // update columns for next workload
-                                workload_cols <= X_dim_out * NUM_PEs * NUM_MACS;                       
+                                workload_cols <= X_dim_out;    
+                                
+                                X_dim_in <= (num_Xff_q + NUM_PEs - 1) / NUM_PEs;
+                                X_dim_out <= (num_X_q + NUM_PEs - 1) / NUM_PEs;
+                                d_dim_in <= (num_X_q + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
+                                                                                 
                             end else begin 
                                 en_lin <= 0;
                                 en_f1 <= 0;
                                 en_f2 <= 0;
                                 num_X_in <= num_X_q;
                                 num_X_out <= num_X_q;    
+                                
                                 // update columns for next workload
-                                workload_cols <= X_dim_out * NUM_PEs * NUM_MACS;
-                                ff2_done <= 1;        
+                                workload_cols <= X_dim_out;
+                                ff2_done <= 1;  
+                                
+                                X_dim_in <= (num_X_q + NUM_PEs - 1) / NUM_PEs;
+                                X_dim_out <= (num_X_q + NUM_PEs - 1) / NUM_PEs;
+                                d_dim_in <= (num_X_q + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
+                                      
                             end              
                         // otherwise we start the pes and reset the vector address
                         end else begin           
-                            workload_cols <= X_dim_in * NUM_PEs * NUM_MACS;
+                            workload_cols <= X_dim_in;
                             vec_cntr <= 0;
+                            
+                            w_mem_addr_internal <= (d_cntr) * X_dim_in; 
+                            
                             if(vec_cntr > 0) begin
                                 d_cntr <= d_cntr + 1;  
+                                w_mem_addr_internal <= (d_cntr + 1) * X_dim_in; 
                             end
                             new_input <= 1;
                         end

@@ -42,8 +42,8 @@ module sp_ram   #(
     reg [DATA_WIDTH-1:0] sp_ram [MEM_DEPTH-1:0];
 //    (*ram_style="block", use_bram36="yes"*) reg [DATA_WIDTH-1:0] sp_ram [depth(ADDR_WIDTH)-1:0];
     
-    reg [DATA_WIDTH-1:0] mem_out_internal = {DATA_WIDTH{1'b0}};
-        
+    reg [DATA_WIDTH-1:0] mem_out_internal, ram_out = 0;
+    
     reg [127:0] i, j;
     //init the memory contents either with 0s or an init file
     initial begin
@@ -58,24 +58,27 @@ module sp_ram   #(
             end
         end
     end
-    
+  
     always @(posedge clk) begin
-        if(rst) begin
-            mem_out_internal <= 0;
-        end
-        else begin
-            if(en) begin
-                if(wr) begin
-                    sp_ram[mem_addr] <= mem_in;
-                end
-                else begin
-                    mem_out_internal <= sp_ram[mem_addr]; 
-                end
+        if(en) begin
+            if(wr) begin
+                sp_ram[mem_addr] <= mem_in;
             end
+            
+            ram_out <= sp_ram[mem_addr];   
+            
         end
     end
     
-    assign mem_out = mem_out_internal;
+//    always @(posedge clk) begin
+//        if(rst) begin 
+//            mem_out_internal <= 0;
+//        end else begin
+//            mem_out_internal <= ram_out;
+//        end
+//    end
+     
+    assign mem_out = ram_out;
     
     function integer depth;
         input integer width;

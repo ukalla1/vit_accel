@@ -32,8 +32,8 @@ module pe_array #(
     input [15:0] workload_cols,
     input signed [NUM_ROWS*NUM_PEs*NUM_MACS*DATA_WIDTH-1:0] matrix_flat,
     input signed [NUM_ROWS*NUM_PEs*NUM_MACS*DATA_WIDTH-1:0] vector_flat,
-    output reg done,
-    output signed [NUM_ROWS*NUM_MACS*(2*DATA_WIDTH)-1:0] results_flat
+    output reg done_o,
+    output reg signed [NUM_ROWS*NUM_MACS*(2*DATA_WIDTH)-1:0] results_flat_out
 );
 
     // FSM States
@@ -55,6 +55,10 @@ module pe_array #(
     wire [NUM_PEs-1:0] accumulate_en_vec;
     
     wire rst_acc;
+    
+    wire signed [NUM_ROWS*NUM_MACS*(2*DATA_WIDTH)-1:0] results_flat;
+    
+    reg done;
     
     genvar pe;
     generate
@@ -114,8 +118,11 @@ module pe_array #(
     assign results_flat = pe_row_results;//(state == CAPTURE_RESULTS) ? pe_row_results : 0; 
     assign rst_acc = ((state == IDLE) && start) ? 1'b1 : 1'b0;
     // FSM Logic
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk) begin
+        done_o <= done;
         if (rst) begin
+            results_flat_out <= 0;
+            
             state <= IDLE;
             done <= 1;
             workload_latched <= 0;
@@ -125,6 +132,8 @@ module pe_array #(
 //            buffer_en <= 0;
 //            $display("[Cycle %0t] [FSM RESET] State reset to IDLE.", $time);
         end else begin
+            results_flat_out <= results_flat;
+            
             case (state)
                 IDLE: begin
 //                    rst_acc <= 0;
@@ -136,7 +145,7 @@ module pe_array #(
                         workload_latched <= workload_cols;
                         computed_cols <= 0;
 //                        reuse_mode <= (workload_cols > NUM_PEs * NUM_MACS);
-                        if(workload_cols > NUM_PEs * NUM_MACS) begin
+                        if(workload_cols > 1) begin
                             state <= WAIT_PE_1;                        
                         end else begin
                             state <= CAPTURE_RESULTS;                        
@@ -149,8 +158,8 @@ module pe_array #(
 //                    rst_acc <= 0;
 //                    buffer_en <= reuse_mode && (computed_cols != 0);
 //                    state <= CAPTURE_RESULTS;
-                    if (computed_cols + (NUM_PEs * NUM_MACS) < workload_latched) begin
-                        computed_cols <= computed_cols + NUM_PEs * NUM_MACS;
+                    if (computed_cols + (1) < workload_latched) begin
+                        computed_cols <= computed_cols + 1;
                     end else begin
                         state <= IDLE; 
                         done <= 1;

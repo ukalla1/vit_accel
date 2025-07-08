@@ -32,6 +32,7 @@ module qkv_block    #(
     parameter NUM_PEs = 1,
     parameter NUM_MACS = 1,
     parameter NUM_ROWS = 1,
+    localparam qkv_dim = QKV,
     // we need ceil(X / NUM_PES) repetitions for a single output
     // to get all outputs we need ceil(QKV / (NUM_MACS * NUM_ROWS)) iterations
     localparam integer d_p1 = ((X + (NUM_PEs) - 1) / NUM_PEs),
@@ -61,7 +62,6 @@ module qkv_block    #(
     //FSM control signals
     input start,
     input [COUNTER_WIDTH-1:0] x_dim, // the dimension of xprime, X is xprime * H long
-    input [COUNTER_WIDTH-1:0] qkv_dim,
     input [COUNTER_WIDTH-1:0] H_dim, // the number of heads/operation repetitions
     input [2:0] mem_sel,
     input [X_MEM_WIDTH - 1 : 0] x_in,
@@ -76,14 +76,7 @@ module qkv_block    #(
     output reg done
 ); 
 
-    reg [COUNTER_WIDTH - 1 : 0] H_dim_q, num_X_in, num_X_out;
-    reg [COUNTER_WIDTH - 1 : 0] num_X_q,num_qkv_q;
-    wire [COUNTER_WIDTH - 1 : 0] X_dim_in, X_dim_out, X_dim, d_dim_in;
-    
-    assign X_dim_out = (num_X_out + NUM_PEs - 1) / NUM_PEs;
-    assign X_dim_in = (num_X_in + NUM_PEs - 1) / NUM_PEs;
-    assign X_dim = (num_X_q + NUM_PEs - 1) / NUM_PEs;
-    assign d_dim_in = (num_X_out + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
+    reg [COUNTER_WIDTH - 1 : 0] X_dim_in, X_dim_out, X_dim, d_dim_in;
     
     reg wq_mem_en, wk_mem_en, wv_mem_en;
         
@@ -101,7 +94,7 @@ module qkv_block    #(
     reg mem_wr_internal;    
         
     reg [W_MEM_ADDR_W -1:0] w_mem_addr;
-    wire [W_MEM_ADDR_W -1:0] w_mem_addr_internal;
+    reg [W_MEM_ADDR_W -1:0] w_mem_addr_internal;
     
     reg en_q, en_k, en_v;
                            
@@ -220,8 +213,8 @@ module qkv_block    #(
         .workload_cols(workload_cols),
         .matrix_flat(pe_matrix_in), // if qkv is done next step is attention, otherwise need to finish qkv
         .vector_flat(pe_vector_in),
-        .done(done_pes),
-        .results_flat(pe_results_out)
+        .done_o(done_pes),
+        .results_flat_out(pe_results_out)
     );  
     
     
@@ -254,7 +247,7 @@ module qkv_block    #(
          
     assign data_rdy = (done_pes & !done_pes_q);
     // "delay" registers
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk) begin
         if(rst) begin
             done_pes_q <= 1;
         end else begin
@@ -403,27 +396,21 @@ module qkv_block    #(
     // mat_cntr corresponds to what iteration we are at
     // mat_cntr corresponds to what row of the input matrix we are looking at
     // h_cntr corresponds to the current head we are working on, or an offset of X_dim * d_dim
-    // l_cntr corresponds to the current Layer we are working on or an offset of X_dim * d_dim * H_dim
-    assign w_mem_addr_internal = vec_cntr + d_cntr * X_dim_in + h_cntr * X_dim_in * d_dim_in;    
-    
+    // l_cntr corresponds to the current Layer we are working on or an offset of X_dim * d_dim * H_dim    
     assign pe_matrix_in = !q_done ? wq_mem_out_internal :
                           !k_done ? wk_mem_out_internal :
                           !v_done ? wv_mem_out_internal :
                           !attention_done ? qkt_grid_out_truncated :            
                           0;
-                       
         
     // process controlling the PE array
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk) begin
         if(rst) begin
             workload_cols <= 0;
             start_pes <= 0;     
             state <= idle;
             done <= 1;
-                                    
-            H_dim_q <= 0;  
             
-            num_X_q <= 0;
             
             mem_pe_cntrl <= 0;
             
@@ -448,11 +435,7 @@ module qkv_block    #(
             full_k_in <= 0;
             full_v_in <= 0;
             output_rdy <= 0;
-                       
-            num_X_in <= 0;
-            num_X_out <= 0;
-            num_qkv_q <= 0;
-                       
+                                             
             output_rdy <= 0;
             concatenate_buff <= 0; // clear concat buffer 
             
@@ -460,9 +443,16 @@ module qkv_block    #(
             en_k <= 0;
             en_v <= 0;
             
+            
+            X_dim_out <= 0;
+            X_dim_in <= 0;
+            X_dim <= 0;
+            d_dim_in <= 0; // ceiling calculation
+                        
             vec_in <= 0;
             q_slice <= 0;
             kt_slice <= 0;
+            w_mem_addr_internal <= 0;
             
         end else begin
             if(ff_rdy & output_rdy) begin
@@ -475,7 +465,6 @@ module qkv_block    #(
                     
             q_slice <= (d_cntr < q_stack_size) ? q_stack[d_cntr] : 0;
             kt_slice <= (vec_cntr < kt_stack_size) ? kt_stack[vec_cntr] : 0;
-        
         
             case(state)
                 idle: begin
@@ -491,54 +480,25 @@ module qkv_block    #(
                         d_cntr <= 0;
                         h_cntr <= 0;
                         vec_cntr <= 0;
+                        w_mem_addr_internal <= 0;    
                         
                         state <= compute;
                         mem_pe_cntrl <= 1; // internals have control of PE
                         done <= 0;
                         
-                        rst_cnt_new <= 1;                                      
-                        num_X_q <= x_dim;                       
+                        rst_cnt_new <= 1;                         
+                       
                         
-                        num_X_in <= x_dim;
-                        num_qkv_q <= qkv_dim;
-                        num_X_out <= qkv_dim;
+                        X_dim_out <= (qkv_dim + NUM_PEs - 1) / NUM_PEs;
+                        X_dim_in <= (x_dim + NUM_PEs - 1) / NUM_PEs;
+                        X_dim <= (x_dim + NUM_PEs - 1) / NUM_PEs;
+                        d_dim_in <= (qkv_dim + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
                         
-                        H_dim_q <= H_dim;  
                         
                         en_q <= 1;
                         en_k <= 0;
                         en_v <= 0;
                          
-                    end else begin
-                        q_done <= 0;
-                        k_done <= 0;
-                        v_done <= 0;
-                        attention_done <= 0;
-                        
-                        workload_cols <= 0;
-                        start_pes <= 0;
-                                
-                        d_cntr <= 0;
-                        h_cntr <= 0;
-                        vec_cntr <= 0;
-                        
-                        state <= idle;
-                        mem_pe_cntrl <= 0; // internals have control of PE
-                        done <= 1;
-                        
-                        rst_cnt_new <= 0;                                      
-                        num_X_q <= 0;                       
-                        
-                        num_X_in <= 0;
-                        num_qkv_q <= 0;
-                        num_X_out <= 0;
-                        
-                        H_dim_q <= 0;                          
-                                    
-                        en_q <= 0;
-                        en_k <= 0;
-                        en_v <= 0;
-                    
                     end
                 end
                 compute: begin
@@ -548,8 +508,10 @@ module qkv_block    #(
                     start_pes <= 0;
                     new_input <= 0; 
                 
-                    if(vec_cntr < X_dim_in) begin
-                        vec_cntr <= vec_cntr + 1;             
+                    if((vec_cntr > 0) && (vec_cntr < X_dim_in) || (start_pes)) begin
+                        vec_cntr <= vec_cntr + 1;         
+                        
+                        w_mem_addr_internal <= (vec_cntr + 1) + d_cntr * X_dim_in + h_cntr * X_dim_in * d_dim_in;        
                     end 
                               
                     
@@ -579,7 +541,10 @@ module qkv_block    #(
                             full_k_in <= 0;
                             full_v_in <= 0;
                             attention_done <= 0;                                      
-                            concatenate_buff <= (buf_out << (num_qkv_q * (h_cntr - 1) * DATA_WIDTH)) | concatenate_buff;
+                            //concatenate_buff <= (buf_out << (num_qkv_q * (h_cntr - 1) * DATA_WIDTH)) | concatenate_buff;
+                            
+                            concatenate_buff <= {{buf_out[qkv_dim * DATA_WIDTH - 1 : 0]}, {concatenate_buff[H * qkv_dim * DATA_WIDTH - 1 : qkv_dim * DATA_WIDTH]}};
+                            
                             
                         end 
                     end        
@@ -595,29 +560,43 @@ module qkv_block    #(
                             rst_cnt_new <= 1; // new head reset buffer
                             new_input <= 1;
                             d_cntr <= 0; 
-                            vec_cntr <= 0;                                                                 
+                            vec_cntr <= 0;
+                            
+                            w_mem_addr_internal <= h_cntr * X_dim_in * d_dim_in;                                                                     
                                     
                             if(!q_done) begin   
-                                num_X_in <= num_X_q;
-                                num_X_out <= num_qkv_q;       
-                                workload_cols <= X_dim_in * NUM_PEs * NUM_MACS;                         
+                                workload_cols <= X_dim_in;                                 
+                                    
+                                X_dim_out <= (qkv_dim + NUM_PEs - 1) / NUM_PEs;
+                                X_dim_in <= (x_dim + NUM_PEs - 1) / NUM_PEs;
+                                X_dim <= (x_dim + NUM_PEs - 1) / NUM_PEs;
+                                d_dim_in <= (qkv_dim + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
+                                                                
                                 q_done <= 1;
                                 en_q <= 0;
                                 en_k <= 1;
                                 en_v <= 0;
                             end else if(!k_done) begin
-                                num_X_in <= num_X_q;
-                                num_X_out <= num_qkv_q;      
-                                workload_cols <= X_dim_in * NUM_PEs * NUM_MACS; // workload for v equal to input dimension                         
+                                workload_cols <= X_dim_in; // workload for v equal to input dimension           
+                                
+                                X_dim_out <= (qkv_dim + NUM_PEs - 1) / NUM_PEs;
+                                X_dim_in <= (x_dim + NUM_PEs - 1) / NUM_PEs;
+                                X_dim <= (x_dim + NUM_PEs - 1) / NUM_PEs;
+                                d_dim_in <= (qkv_dim + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
+                                             
                                 k_done <= 1;
                                 
                                 en_q <= 0;
                                 en_k <= 0;
                                 en_v <= 1;
                             end else if(!v_done) begin
-                                num_X_in <= num_qkv_q;
-                                num_X_out <= num_qkv_q;   
-                                workload_cols <= X_dim_out * NUM_PEs * NUM_MACS;  // workload equal to dimension of qkv out                                     
+                                workload_cols <= X_dim_out;  // workload equal to dimension of qkv out      
+                                
+                                X_dim_out <= (qkv_dim + NUM_PEs - 1) / NUM_PEs;
+                                X_dim_in <= (qkv_dim + NUM_PEs - 1) / NUM_PEs;
+                                X_dim <= (x_dim + NUM_PEs - 1) / NUM_PEs;
+                                d_dim_in <= (qkv_dim + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
+                                                      
                                 v_done <= 1;   
                                                                 
                                 en_q <= 0;
@@ -625,33 +604,41 @@ module qkv_block    #(
                                 en_v <= 0;         
                                                                       
                             end else if(!attention_done) begin  
-                                attention_done <= 1;                                                      
-                                num_X_in <= num_X_q;
-                                num_X_out <= num_qkv_q;    
+                                attention_done <= 1;        
                                 h_cntr <= h_cntr + 1; 
-                                workload_cols <= X_dim * NUM_PEs * NUM_MACS;  // workload back to the dimension of X in
+                                w_mem_addr_internal <= (h_cntr + 1) * X_dim_in * d_dim_in;    
+                                workload_cols <= X_dim;  // workload back to the dimension of X in                                
+                                
+                                X_dim_out <= (qkv_dim + NUM_PEs - 1) / NUM_PEs;
+                                X_dim_in <= (x_dim + NUM_PEs - 1) / NUM_PEs;
+                                X_dim <= (x_dim + NUM_PEs - 1) / NUM_PEs;
+                                d_dim_in <= (qkv_dim + (NUM_MACS * NUM_ROWS) - 1) / (NUM_MACS * NUM_ROWS); // ceiling calculation
+                                
                                 en_q <= 1;
                                 en_k <= 0;
                                 en_v <= 0;
                                 // make sure that pes arent turned on after last head
-                                if(h_cntr + 1 >= H_dim_q) begin
+                                if(h_cntr + 1 >= H_dim) begin
                                     start_pes <= 0;
                                 end
                             end 
                         // otherwise we start the pes and reset the vector address
                         end else begin
                             start_pes <= 1;              
-                            workload_cols <= X_dim_in * NUM_PEs * NUM_MACS;
+                            workload_cols <= X_dim_in;
                             vec_cntr <= 0;
+                            w_mem_addr_internal <= (d_cntr) * X_dim_in + h_cntr * X_dim_in * d_dim_in;    
+                            
                             if(vec_cntr > 0) begin
                                 d_cntr <= d_cntr + 1;  
+                                w_mem_addr_internal <= (d_cntr + 1) * X_dim_in + h_cntr * X_dim_in * d_dim_in;  
                             end
                             new_input <= 1;
                         end
                     end                                                        
                     
                     // number of columns is the size of the x input
-                    if(h_cntr >= H_dim_q) begin
+                    if(h_cntr >= H_dim) begin
                         output_rdy <= 1;          
                         state <= idle;
                         start_pes <= 0;

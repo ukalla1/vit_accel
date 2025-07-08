@@ -49,7 +49,7 @@ module pe_output_buffer #(
     endgenerate
         
     integer i;
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk) begin
         if(rst || rst_cntr) begin
             d_pointer <= 0;
             for(i = 0; i < D; i = i + 1) begin
