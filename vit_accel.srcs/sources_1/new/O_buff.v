@@ -53,7 +53,7 @@ module O_buff #(
     endgenerate
     
     generate
-        for (i=0; i<NUM_PEs_PER_ROW; i=i+1) begin
+        for (i=0; i<NUM_PEs_PER_ROW; i=i+1) begin: mem_O_gen
             sp_ram   #(
                 .DATA_WIDTH (DATA_WIDTH),
                 .MEM_DEPTH (NUM_ROWS),

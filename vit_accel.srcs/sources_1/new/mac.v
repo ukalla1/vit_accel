@@ -56,7 +56,7 @@
         input rst,
         input [DATA_WIDTH-1:0] a,
         input [DATA_WIDTH-1:0] b,
-        input [DATA_WIDTH-1:0] acc_in,
+//        input [DATA_WIDTH-1:0] acc_in,
         output reg [DATA_WIDTH-1:0] acc_out
     );
         

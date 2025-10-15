@@ -53,5 +53,12 @@ module B_buff #(
         .wr (wr),
         .mem_out (out)
     );
+
+    function integer width;
+        input integer n;
+        for (width=0; n>0; width=width+1) begin
+            n = n >> 1;
+        end
+    endfunction
     
 endmodule

@@ -3,7 +3,8 @@
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
-# Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
 echo "This script was generated under a different operating system."
@@ -11,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/Xilinx/Vivado/2021.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2021.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2021.1/bin
+  PATH=C:/Xilinx/Vitis/2024.2/bin;C:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2024.2/bin
 else
-  PATH=C:/Xilinx/Vivado/2021.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2021.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2021.1/bin:$PATH
+  PATH=C:/Xilinx/Vitis/2024.2/bin;C:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2024.2/bin:$PATH
 fi
 export PATH
 
@@ -42,6 +43,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log adder_col.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source adder_col.tcl -notrace
+EAStep vivado -log PE_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source PE_wrapper.tcl -notrace
 
 

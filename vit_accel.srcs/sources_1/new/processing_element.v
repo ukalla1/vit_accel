@@ -192,7 +192,7 @@ endmodule
                     .rst(rst),
                     .a(a_unpack[i]),
                     .b(b_unpack[i]),
-                    .acc_in({DATA_WIDTH{1'b0}}),
+//                    .acc_in({DATA_WIDTH{1'b0}}),
     //                .acc_in(mac_out[i]),
                     .acc_out(mac_out[i])
                 );
@@ -213,16 +213,14 @@ endmodule
                             result_internal1 = 0;
                         end
                         else begin
-                            result_internal0 = result_internal0;
-                            result_internal1 = result_internal1;
+                            for (j=0; j<(NUM_MACS/2); j=j+1) begin
+                                result_internal0 = result_internal0 + mac_out[j];
+                            end
+                            for (k=(NUM_MACS/2); k<NUM_MACS; k=k+1) begin
+                                result_internal1 = result_internal1 + mac_out[k];
+                            end
+                            result_internal = result_internal0 + result_internal1;
                         end
-                        for (j=0; j<(NUM_MACS/2); j=j+1) begin
-                            result_internal0 = result_internal0 + mac_out[j];
-                        end
-                        for (k=(NUM_MACS/2); k<NUM_MACS; k=k+1) begin
-                            result_internal1 = result_internal1 + mac_out[k];
-                        end
-                        result_internal = result_internal0 + result_internal1;
                     end
                     
                     2'b01: begin // implement softmax here

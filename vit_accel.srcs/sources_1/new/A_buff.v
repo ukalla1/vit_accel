@@ -55,7 +55,7 @@ module A_buff   #(
     endgenerate
     
     generate
-        for (i=0; i<NUM_PEs_PER_ROW; i=i+1) begin
+        for (i=0; i<NUM_PEs_PER_ROW; i=i+1) begin: mem_A_gen
             sp_ram   #(
                 .DATA_WIDTH (DATA_WIDTH*NUM_MACS),
                 .MEM_DEPTH (NUM_ROWS),

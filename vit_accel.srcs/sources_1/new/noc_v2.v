@@ -52,7 +52,7 @@
         
         genvar j;
         generate
-            for (j=0; j<NUM_PEs_PER_ROW; j=j+1) begin
+            for (j=0; j<NUM_PEs_PER_ROW; j=j+1) begin: add_col_gen
                 adder_col #(
                     .DATA_WIDTH (DATA_WIDTH),
                     .NUM_ROWS (NUM_ROWS)

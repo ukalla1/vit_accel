@@ -1,6 +1,7 @@
-Vivado Simulator v2021.1
-Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 7000d88192f345deb2b16fdfd7d05921 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PE_wrapper_tb_behav xil_defaultlib.PE_wrapper_tb xil_defaultlib.glbl -log elaborate.log 
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot mac_tb_behav xil_defaultlib.mac_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -8,20 +9,7 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.config_regs(NUM_PEs_PER_ROW=5)
-Compiling module xil_defaultlib.sp_ram(DATA_WIDTH=32,MEM_DEPTH=4...
-Compiling module xil_defaultlib.A_buff(MEM_DEPTH=4,ADDR_WIDTH=3,...
-Compiling module xil_defaultlib.B_buff(MEM_DEPTH=4,ADDR_WIDTH=3,...
-Compiling module xil_defaultlib.sp_ram(MEM_DEPTH=4)
-Compiling module xil_defaultlib.O_buff(MEM_DEPTH=4,ADDR_WIDTH=3,...
 Compiling module xil_defaultlib.mac
-Compiling module xil_defaultlib.processing_element_default
-Compiling module xil_defaultlib.pe_row(NUM_PEs_PER_ROW=5)
-Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.adder_col_default
-Compiling module xil_defaultlib.noc_v2(NUM_PEs_PER_ROW=5)
-Compiling module xil_defaultlib.pe_array_v2_default
-Compiling module xil_defaultlib.PE_wrapper_default
-Compiling module xil_defaultlib.PE_wrapper_tb
+Compiling module xil_defaultlib.mac_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot PE_wrapper_tb_behav
+Built simulation snapshot mac_tb_behav

@@ -70,7 +70,7 @@ module adder_col #(
     endgenerate
     
     generate
-        for (i=0; i<NUM_ROWS-1; i=i+1) begin
+        for (i=0; i<NUM_ROWS-1; i=i+1) begin: add_gen
             if(i==0) begin
                 adder #(
                     .DATA_WIDTH(DATA_WIDTH)

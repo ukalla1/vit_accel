@@ -1,22 +1,438 @@
 #-----------------------------------------------------------
-# Vivado v2021.1 (64-bit)
-# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
-# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Mon Jul 15 19:19:02 2024
-# Process ID: 52196
-# Current directory: C:/work/research/Accelerator/VIT/vit_accel
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21960 C:\work\research\Accelerator\VIT\vit_accel\vit_accel.xpr
-# Log file: C:/work/research/Accelerator/VIT/vit_accel/vivado.log
-# Journal file: C:/work/research/Accelerator/VIT/vit_accel\vivado.jou
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Apr 13 10:13:47 2025
+# Process ID         : 50360
+# Current directory  : C:/work/research/Accelerator/VIT/vit_accel
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent43200 C:\work\research\Accelerator\VIT\vit_accel\vit_accel.xpr
+# Log file           : C:/work/research/Accelerator/VIT/vit_accel/vivado.log
+# Journal file       : C:/work/research/Accelerator/VIT/vit_accel\vivado.jou
+# Running On         : LAPTOP-OEFK15M3
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 9 5900HS with Radeon Graphics        
+# CPU Frequency      : 3294 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16541 MB
+# Swap memory        : 12884 MB
+# Total Virtual      : 29426 MB
+# Available Virtual  : 6382 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/work/research/Accelerator/VIT/vit_accel/vit_accel.xpr
-WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
-open_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1136.953 ; gain = 0.000
-updatINFO: [Common 17-206] Exiting Vivadexit
-INFO: [Common 17-206] Exiting Vivado at Mon Jul 15 21:36:07 2024...
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1253.336 ; gain = 133.488
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+set_property SOURCE_SET sources_1 [get_filesets sim_2]
+close [ open C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v w ]
+add_files -fileset sim_2 C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+set_property top tb_attention_block [get_filesets sim_2]
+set_property top_lib xil_defaultlib [get_filesets sim_2]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+launch_simulation -simset [get_filesets sim_2 ]
+Command: launch_simulation  -simset sim_2
+INFO: [Vivado 12-12493] Simulation top is 'tb_attention_block'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_attention_block' in fileset 'sim_2'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim'
+"xvlog --incr --relax -prj tb_attention_block_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/attention_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module attention_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_attention_block
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_attention_block_behav xil_defaultlib.tb_attention_block xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_attention_block_behav xil_defaultlib.tb_attention_block xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'done' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:74]
+ERROR: [VRFC 10-3180] cannot find port 'pe_array_start' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:72]
+ERROR: [VRFC 10-3180] cannot find port 'output_mem_en' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:71]
+ERROR: [VRFC 10-3180] cannot find port 'weight_mem_en' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:70]
+ERROR: [VRFC 10-3180] cannot find port 'embedding_mem_en' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:69]
+ERROR: [VRFC 10-3180] cannot find port 'output_mem_addr_flat' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:68]
+ERROR: [VRFC 10-3180] cannot find port 'weight_mem_addr_flat' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:67]
+ERROR: [VRFC 10-3180] cannot find port 'embedding_mem_addr_flat' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:66]
+ERROR: [VRFC 10-3180] cannot find port 'pe_array_num_rows' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:65]
+ERROR: [VRFC 10-3180] cannot find port 'pe_array_num_macs' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:64]
+ERROR: [VRFC 10-3180] cannot find port 'pe_array_num_pes' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:63]
+ERROR: [VRFC 10-3180] cannot find port 'proj_dim' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:62]
+ERROR: [VRFC 10-3180] cannot find port 'embed_dim' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:61]
+ERROR: [VRFC 10-8530] module 'attention_block(NUM_PE_ROWS=3)' is ignored due to previous errors [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/attention_block.v:23]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1316.328 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+launch_simulation -simset [get_filesets sim_2 ]
+Command: launch_simulation  -simset sim_2
+INFO: [Vivado 12-12493] Simulation top is 'tb_attention_block'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_attention_block' in fileset 'sim_2'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim'
+"xvlog --incr --relax -prj tb_attention_block_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/processing_element.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processing_element
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/A_buff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module A_buff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/B_buff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module B_buff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/O_buff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module O_buff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/adder_col.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_col
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/config_regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module config_regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/noc_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noc_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/pe_array_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_array_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/pe_row.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_row
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/sp_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/PE_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/mult_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/mac_temporal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_temporal
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/pe_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/mac_temporal_asic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_temporal_asic
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/workload_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module workload_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/mac_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/processing_element_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processing_element_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/pe_row_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_row_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/adder_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/pe_array_v3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_array_v3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/attention_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module attention_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/A_buff_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module A_buff_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/PE_wrapper_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_wrapper_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/noc_v2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noc_v2_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_row_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_row_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_array_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_array_tb
+WARNING: [VRFC 10-8497] literal value 'b00010001_00010001_00010001_00010001 truncated to fit in 16 bits [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_array_tb.v:108]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/mac_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/adder_col_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_col_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_array_v2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_array_v2_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/pe_v2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_v2_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/controller_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_mac_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_mac_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_processing_element.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_processing_element
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_pe_row.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pe_row
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_pe_array_v3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pe_array_v3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_attention_block
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1316.328 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_attention_block_behav xil_defaultlib.tb_attention_block xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_attention_block_behav xil_defaultlib.tb_attention_block xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'done' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:74]
+ERROR: [VRFC 10-3180] cannot find port 'pe_array_start' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:72]
+ERROR: [VRFC 10-3180] cannot find port 'output_mem_en' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:71]
+ERROR: [VRFC 10-3180] cannot find port 'weight_mem_en' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:70]
+ERROR: [VRFC 10-3180] cannot find port 'embedding_mem_en' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:69]
+ERROR: [VRFC 10-3180] cannot find port 'output_mem_addr_flat' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:68]
+ERROR: [VRFC 10-3180] cannot find port 'weight_mem_addr_flat' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:67]
+ERROR: [VRFC 10-3180] cannot find port 'embedding_mem_addr_flat' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:66]
+ERROR: [VRFC 10-3180] cannot find port 'pe_array_num_rows' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:65]
+ERROR: [VRFC 10-3180] cannot find port 'pe_array_num_macs' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:64]
+ERROR: [VRFC 10-3180] cannot find port 'pe_array_num_pes' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:63]
+ERROR: [VRFC 10-3180] cannot find port 'proj_dim' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:62]
+ERROR: [VRFC 10-3180] cannot find port 'embed_dim' on this module [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v:61]
+ERROR: [VRFC 10-8530] module 'attention_block(NUM_PE_ROWS=3)' is ignored due to previous errors [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/attention_block.v:23]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1316.328 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\pe_array_v3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sources_1\new\attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\work\research\Accelerator\VIT\vit_accel\vit_accel.srcs\sim_2\new\tb_attention_block.v:]
+launch_simulation -simset [get_filesets sim_2 ]
+Command: launch_simulation  -simset sim_2
+INFO: [Vivado 12-12493] Simulation top is 'tb_attention_block'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_attention_block' in fileset 'sim_2'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim'
+"xvlog --incr --relax -prj tb_attention_block_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/processing_element.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processing_element
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/A_buff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module A_buff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/B_buff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module B_buff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/O_buff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module O_buff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/adder_col.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_col
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/config_regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module config_regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/noc_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noc_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/pe_array_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_array_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/pe_row.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_row
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/sp_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sp_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/PE_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/mult_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/mac_temporal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_temporal
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/pe_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/mac_temporal_asic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_temporal_asic
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/workload_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module workload_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/mac_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/processing_element_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processing_element_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/pe_row_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_row_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/adder_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/pe_array_v3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_array_v3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sources_1/new/attention_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module attention_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/A_buff_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module A_buff_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/PE_wrapper_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_wrapper_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/noc_v2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noc_v2_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_row_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_row_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_array_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_array_tb
+WARNING: [VRFC 10-8497] literal value 'b00010001_00010001_00010001_00010001 truncated to fit in 16 bits [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_array_tb.v:108]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/mac_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/adder_col_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_col_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_array_v2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_array_v2_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/pe_v2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_v2_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/controller_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_mac_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_mac_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_processing_element.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_processing_element
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_pe_row.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pe_row
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_pe_array_v3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_pe_array_v3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_attention_block
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1316.328 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_attention_block_behav xil_defaultlib.tb_attention_block xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_attention_block_behav xil_defaultlib.tb_attention_block xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.attention_block
+Compiling module xil_defaultlib.tb_attention_block
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_attention_block_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_attention_block_behav -key {Behavioral:sim_2:Functional:tb_attention_block} -tclbatch {tb_attention_block.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_attention_block.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# open_saif "pe_v2_44_64.saif"
+# set curr_xsim_wave_scope [current_scope]
+# current_scope /uut
+# log_saif [get_objects -r *]
+# current_scope $curr_xsim_wave_scope
+# unset curr_xsim_wave_scope
+# run 1000ns
+$finish called at time : 440 ns : File "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/new/tb_attention_block.v" Line 102
+# close_saif
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_attention_block_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1316.328 ; gain = 0.000

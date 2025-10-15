@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.sim/sim_2/synth/func/xsim/mac_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/A_buff_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module A_buff_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/PE_wrapper_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_wrapper_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/noc_v2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noc_v2_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_row_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_row_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_array_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_array_tb
+WARNING: [VRFC 10-8497] literal value 'b00010001_00010001_00010001_00010001 truncated to fit in 16 bits [C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_array_tb.v:108]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/mac_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/adder_col_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_col_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/work/research/Accelerator/VIT/vit_accel/vit_accel.srcs/sim_2/imports/new/pe_array_v2_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pe_array_v2_tb
