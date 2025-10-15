@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_pe_aray_v3_behav/xsimk.exe -simmode gui -wdb tb_pe_aray_v3_behav.wdb -simrunnum 0 -socket 65168
-Design successfully loaded
-Design Loading Memory Usage: 28784 KB (Peak: 28784 KB)
-Design Loading CPU Usage: 905 ms
-Simulation completed
-Simulation Memory Usage: 34708 KB (Peak: 34708 KB)
-Simulation CPU Usage: 1078 ms
