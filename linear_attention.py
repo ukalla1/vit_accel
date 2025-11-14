@@ -213,6 +213,69 @@ class HSwishLinearSelfAttention(nn.Module):
         context = self.dropout(context)
         return (context.to(out_dtype), None)
 
+class Sigmoid2LinearSelfAttention(nn.Module):
+    """
+    Base-2 sigmoid feature map for linear attention:
+        phi(x) = 1 / (1 + 2^{-beta * x})
+    with per-token mean-centering and 1/sqrt(d) scaling for softmax-like temperature.
+    Hardware-friendly: uses exp2 instead of exp.
+    """
+    def __init__(self, src_self_attn: nn.Module, beta: float = 2.0, eps: float = 1e-6, minval: float = 1e-5):
+        super().__init__()
+        self.query   = src_self_attn.query
+        self.key     = src_self_attn.key
+        self.value   = src_self_attn.value
+        self.dropout = getattr(src_self_attn, "dropout", nn.Dropout(0.0))
+        self.num_heads   = src_self_attn.num_attention_heads
+        self.head_dim    = src_self_attn.attention_head_size
+        self.hidden_size = self.num_heads * self.head_dim
+        self.beta = beta
+        self.eps = eps
+        self.minval = minval
+
+    def _shape(self, x, b):
+        return x.view(b, -1, self.num_heads, self.head_dim).transpose(1, 2).contiguous()
+
+    @staticmethod
+    def _sigmoid2(x):
+        # sigma2(x) = 1 / (1 + 2^{-x})
+        return 1.0 / (1.0 + torch.exp2(-x))
+
+    def forward(self, hidden_states, head_mask=None, output_attentions: bool=False):
+        b, L, _ = hidden_states.shape
+        out_dtype = hidden_states.dtype
+
+        # do attention math in fp32 for stability
+        hs = hidden_states.float()
+        q = self._shape(self.query(hs), b)   # (b,h,L,d)
+        k = self._shape(self.key(hs),   b)
+        v = self._shape(self.value(hs), b)
+
+        # softmax temperature analogue + shift invariance
+        scale = self.beta / math.sqrt(self.head_dim)
+        q = (q - q.mean(dim=-1, keepdim=True)) * scale
+        k = (k - k.mean(dim=-1, keepdim=True)) * scale
+
+        # base-2 sigmoid features in (0,1), clamp away from 0 to stabilize denom
+        q_phi = self._sigmoid2(q).clamp_min(self.minval)      # (b,h,L,d)
+        k_phi = self._sigmoid2(k).clamp_min(self.minval)      # (b,h,L,d)
+
+        # linear-time pre-aggregation
+        S = torch.matmul(k_phi.transpose(-2, -1), v.float())  # (b,h,d,d_v)
+        z = k_phi.sum(dim=-2)                                 # (b,h,d)
+
+        num = torch.matmul(q_phi, S)                          # (b,h,L,d_v)
+        den = torch.sum(q_phi * z.unsqueeze(-2), dim=-1).clamp_min(self.eps)  # (b,h,L)
+
+        context = num / den.unsqueeze(-1)
+
+        if head_mask is not None:
+            context = context * head_mask[:, :, None, None]
+
+        context = context.transpose(1, 2).reshape(b, L, self.hidden_size)
+        context = self.dropout(context)
+        return (context.to(out_dtype), None)
+
 
 # def replace_vit_self_attention_with_linear(module: nn.Module):
 #     for name, child in list(module.named_children()):
@@ -227,6 +290,7 @@ def replace_vit_self_attention_with_linear(module: nn.Module, impl="elu1", **kwa
         "elu1": ELU1LinearSelfAttention,        
         "favor": FAVORLinearSelfAttention,
         "hswish":HSwishLinearSelfAttention,
+        "sigmoid2":Sigmoid2LinearSelfAttention,
     }
     cls = impl_map[impl]
     for name, child in list(module.named_children()):
